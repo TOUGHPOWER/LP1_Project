@@ -1,4 +1,4 @@
-namespace 
+namespace GameofUr
 {
     public class View
     {
