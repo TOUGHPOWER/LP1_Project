@@ -6,7 +6,8 @@ namespace GameofUr
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            GameManager gameManager = new GameManager();
+            gameManager.game();
         }
     }
 }
