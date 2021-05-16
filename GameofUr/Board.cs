@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace GameofUr
 {
-    public class Board : View// model
+    public class Board// model
     {
         private string[,] board;
         public const int row = 8;
@@ -61,6 +61,7 @@ namespace GameofUr
                         }
                         if ((view.r == 4 && view.c == 2) || (view.r == 5 && view.c == 2))
                         {
+                            view.playerspawn();
                             continue;
                         }
 
@@ -69,8 +70,14 @@ namespace GameofUr
 
                         view.playerspawn();
                     }
-
-                    view.verticalbs();
+                    if (view.r != 4 && view.r != 5)
+                    {
+                        view.verticalbs();
+                    }
+                    else
+                    {
+                        view.backslash();
+                    }
 
                 }
                 // botton line needs to printed seprately
@@ -412,8 +419,8 @@ namespace GameofUr
 
         private void safeZone()
         {
-            if (Player1_Symbol == players[0, 0] || Player1_Symbol == players[6, 0] //|| Player1_Symbol == players[3, 1]
-                || Player2_Symbol == players[0, 2] || Player2_Symbol == players[6, 2])
+            if (Player1_Symbol == players[0, 0] || Player1_Symbol == players[6, 0] || Player1_Symbol == players[3, 1]
+                || Player2_Symbol == players[0, 2] || Player2_Symbol == players[6, 2] || Player1_Symbol == players[3, 1])
             {
                 safe = true;
                 view.safezone();

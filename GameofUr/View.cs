@@ -62,10 +62,9 @@ namespace GameofUr
         {
             Console.Write("\n");
         }
-
         public void x_5spaces()
         {
-            Console.Write(r + "     ");
+            Console.Write(r + "   " + Player.players[r, c] + " ");
         }
         public void playerspawn()
         {
