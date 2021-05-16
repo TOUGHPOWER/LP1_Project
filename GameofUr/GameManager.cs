@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 using System;
 using System.Collections.Generic;
 
@@ -46,12 +45,4 @@ namespace GameofUr
         }
 
     }
-=======
-namespace 
-{
-    public class GameManager
-    {
-        
-    }
->>>>>>> 942fc46fb668e6413ca0ade8c99a5903c49f85ac
 }
